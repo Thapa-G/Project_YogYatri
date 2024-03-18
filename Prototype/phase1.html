@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .loader{
+            margin-top: 40px;
+        }
+        .upper_section{
+           
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+           
+            
+        }
+        h1{
+            text-align: center;
+        }
+        .bottom_text{
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        #image_load{
+            max-width: 500px;
+            max-height: 500px; 
+            animation:image2 20s linear infinite;
+        }
+        @keyframes image2{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        .image_first{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #fadein{    
+            animation:FadeIn 3s ease;
+        }
+        @keyframes FadeIn{
+            0%{
+                opacity:0;
+                visibility:visible;
+            }
+            100%{
+                opacity: 1;
+                visibility:visible;
+            }
+        }
+        #fadeout{
+            animation:Fadeout 2s ease;
+            animation-delay: 3s;
+        }
+        @keyframes Fadeout{
+            0%{
+                opacity:1;
+                
+            }
+            100%{
+                opacity: 0;
+                visibility:hidden;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        setTimeout(function(){
+            const fade_out=document.getElementById('fadeout');
+            fade_out.style.visibility="hidden";
+        },4500);
+    </script>
+    <div class="loader">
+        <div id="fadein">
+            <div id="fadeout">
+            <div class="upper_section">
+                <h1>
+                    <span>WELCOME</h1>
+                <h1>
+                    TO
+                </h1>
+            </div>
+            <div class="image_first">
+                
+                <img src="../img/mandala.png" alt="loader_image" id="image_load">
+               
+            </div>
+            <div class="upper_section">
+                <h1>YATRA YOGI</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+    
+</body>
+</html>

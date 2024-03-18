@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa">
+    <style type="text/css">
+        .about_us{
+            width: 100%;
+        }
+        .about_us .icon{
+            text-align: center;
+            margin-top: 40px;
+            
+            
+        }
+        .about_us .icon i{
+            color: rgb(9, 10, 10);
+            font-size: 90px;
+            border-radius: 50%;
+            /* height:100px;
+            width:100px; */
+            opacity: 0;
+            animation: show_info 2s ease-in-out 0.6s 1 forwards;
+        }
+        .about_us .icon h2{
+            animation: filter 2s ease-in-out 2s 1 forwards;
+            font-family:'Salsa';
+            opacity: 0;
+            
+            
+        }
+        @keyframes filter{
+            0%{
+                opacity:0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes show_info{
+            0%{
+                opacity:0;
+                font-size: 15px;
+                
+                filter:blur(10px);
+                
+            }
+            
+            100%{
+                opacity: 1;
+                font-size: 90px;
+            }
+                
+            
+        }
+        
+        nav .nav_bar ul li:nth-child(4){
+            animation:nav_show 1s ease-in 0.2s 1 forwards;
+        }
+        nav .nav_bar ul li:nth-child(3),
+        nav .nav_bar ul li:nth-child(5){
+            animation:nav_show 1s ease-in 0.35s 1 forwards;
+        }
+        nav .nav_bar ul li:nth-child(2),
+        nav .nav_bar ul li:nth-child(6){
+            animation:nav_show 1s ease-in 0.45s 1 forwards;
+        }
+        nav .nav_bar ul li:nth-child(1),
+        nav .nav_bar ul li:nth-child(7){
+            animation:nav_show 1s ease-in 0.55s 1 forwards;
+        }
+        
+        @keyframes nav_show{
+            0%{
+                transform:translate(0,-130px);
+                opacity:0;
+            }
+            90%{
+                transform:translate(0,8px);
+            }
+            100%{
+                transform:translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cont" style="background-color: rgb(255, 128, 0); height: 130px;"> 
+    <nav>
+        <div class="nav_upper">
+         <div class="logo"></div>
+        </div>
+        <div class="nav_bar">
+         <ul class="link">
+            
+             <li><a href="#"><i class="fa-solid fa-user-plus"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-route"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-image"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-book-open-reader"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-circle-info"></i></a></li>
+             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+         </ul>
+         <div class="toggle_but">
+             <i class="fa-solid fa-bars"></i>
+         </div>
+        </div>
+        <div class="dropdown">
+         <li><a href="#"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-route"></i><span>Package</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-image"></i><span>Gallary</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-book-open-reader"></i><span>Books</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-circle-info"></i><span>About us</span></a></li>
+             <li><a href="#"><i class="fa-solid fa-user"></i><span>Log In</span></a></li>
+        </div>
+     </nav>
+     </div>
+     <div class="about_us">
+        <div class="icon">
+            <i class="fa-solid fa-info"></i>
+            <h2>About Us</h2>
+        </div>
+
+     </div>
+     <script>
+        //navbar responsive
+   const togglebut=document.querySelector('.toggle_but');
+   const togglebuticon=document.querySelector('.toggle_but i');
+   const dropdown=document.querySelector('.dropdown');
+   togglebut.onclick=function(){
+       dropdown.classList.toggle('open');
+       const isOpen=dropdown.classList.contains('open');
+       togglebuticon.classList=isOpen?'fa-solid fa-xmark':'fa-solid fa-bars';
+   }
+   </script>
+</body>
+</html>

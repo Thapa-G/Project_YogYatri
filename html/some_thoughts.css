@@ -1,0 +1,120 @@
+.thoughts{
+      margin-top: 120px;
+}
+.th_text_head{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:25px;
+    letter-spacing: 1px;
+    padding-left: 70px;
+}
+.th_image{
+    padding-left: 180px;
+    margin:auto;
+    width: 90%;
+    /* border:2px solid black; */
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    justify-content: center;
+    height:500px;
+    box-sizing: border-box;
+    
+    
+}
+
+.th_image .img{
+    margin: auto;
+}
+.th_text{
+    padding-top: 20px;
+    font-family: 'salsa';
+    
+    
+}
+.th_text .test{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 7px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-align: left;
+    box-sizing: border-box;
+    margin-left: 280px;
+    margin-top: 30px;
+    
+    
+}
+.th_text h2{
+    font-size:30px;
+}
+.th_text p{
+    
+    width:500px;
+    font-size: 15px;
+    padding:10px;
+    margin: auto;
+}
+.th_image .img{
+    height:450px;
+    width:450px;
+    overflow:hidden;
+    position: relative;
+    background: url(../img/IMG_4558.JPG);
+    background-size: cover;
+    /* padding:0; */
+    
+}
+.th_image .img:before{
+    
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:460px;
+    height:460px;
+    background: url(../img/Untitled-1.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode:screen;
+}
+.th_text{
+    text-align: center;
+    margin: auto;
+}
+.signature{
+    margin: 0;
+    height:10%;
+    
+}
+.signature p{
+    margin-top: -50px;
+    text-decoration:underline;
+}
+@media(max-width:900px){
+    .th_image{
+        padding-left: 0px;
+        width:100%;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:0;
+        height:fit-content;
+    }
+}
+@media(max-width:600px){
+    .th_image{
+        padding-left: 0px;
+     
+        width: 100%;
+        
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 0px;
+        height: fit-content;
+    }
+    .th_text_head{
+    padding-left: 0;
+
+    }
+    .th_text p{
+        width:400px;
+    }
+}

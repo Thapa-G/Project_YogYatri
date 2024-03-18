@@ -1,0 +1,156 @@
+footer{
+    margin-top: 50px;
+    padding-top:5px;
+}
+/* .footer_container{
+   
+} */
+/* .text{
+    border: 2px solid black;
+} */
+.footer_container .text h2{
+    text-align: center;
+    font-family:'Pacifico';
+    src:url('C:\Users\AASHIK\AppData\Local\Microsoft\Windows\Fonts') format('truetype');
+    font-weight: normal;
+    font-size:30px;
+    letter-spacing: 1px;
+
+}
+.representation{
+    /* border: 2px solid black; */
+    display:grid;
+    width:max-content;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
+    padding-bottom: 0;
+    margin: auto;
+}
+
+.representation>div{
+    width:200px;
+    height:150px;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.representation h3{
+    margin-top: 10px;
+    font-family:'Agency FB'; 
+    font-weight:bolder;
+    font-size: 23px;
+    
+}
+.representation p{
+   font-family:Arial, Helvetica, sans-serif;
+   font-size: 13px;
+   font-weight: normal;
+   
+}
+.representation i{
+    font-size: 21px;
+}
+.mobile{
+    border-right: 3px solid black;
+}
+.address{
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.mail{
+    border-left: 3px solid black;
+    padding-bottom: 5px;
+}
+.mail a{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 13px;
+   text-decoration: none;
+   color:black;
+   box-sizing: border-box;
+   padding-top: 10px;
+}
+.Contact_us{
+    /* border: 2px solid black; */
+    text-align: center;
+    font-family:'Pacifico';
+    src:url('C:\Users\AASHIK\AppData\Local\Microsoft\Windows\Fonts') format('truetype');
+    font-weight: normal;
+    letter-spacing: 1.5px;
+}
+.Contact_us p{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size:15px;
+}
+
+input{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 20px;
+    border:none;
+    font-family:Arial, Helvetica, sans-serif;
+    box-shadow: 0 50px 100px rgb(230, 116, 44);
+    padding-left:10px;
+}
+@media(max-width:810px){
+    .representation{
+        grid-template-columns: repeat(2,1fr) ;
+        align-items: center;
+        grid-gap:20px;
+    }
+    .representation .mail{
+       margin-left: 56%; 
+    }
+    .address{
+        border-right: 0px;
+    }
+    .mail{
+        
+        border-left: 0px;
+    }
+    .Contact_us p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+   
+}
+@media(max-width:600px){
+    .representation{
+        grid-template-columns: repeat(1,1fr);
+        gap:10px;
+    }
+    .representation .mail{
+       margin-left: 0; 
+    }
+    .address{
+    border-right: 3px solid black;
+}
+.mail{
+    border-left: 3px solid black;
+    
+}
+}
+@media(max-width:500px){
+    input{
+    width: 200px;
+    }
+}
+.Contact_us input[type=submit]{
+    width:150px;
+    height:40px;
+    border: none;
+    background-color:rgb(245, 133, 13) ;
+    color:white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.Contact_us input[type=submit]:hover{
+    background-color: #FE1818;
+    transition: 1s ease;
+}
+.Contact_us span{
+    color:red;
+    font-size: small;
+}

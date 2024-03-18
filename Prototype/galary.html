@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+.grid-container {
+    width:100%;
+    margin: auto;
+    background-color: #2196F3;
+    padding: 10px;
+    justify-content: center;
+}
+.gallary{
+    display:flex;
+    justify-content: center;
+    height:500px;
+    align-items: center;
+}
+.grid-container .gallary>div{
+    position: absolute;
+    border-radius: 5px;
+    
+    
+}
+.item1{
+    height:150px;
+    width:240px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: brown;
+    top:45%;
+    left:35%;
+}
+.item2{
+    height:200px;
+    width:150px;
+    border: 3px solid rgb(255, 255, 255);
+    top:10%;
+    left:36%;
+    background-color: rgb(42, 138, 165);
+}
+.item3{
+    height:210px;
+    width:160px;
+    border: 3px solid rgb(255, 255, 255);
+    top:32%;
+    left:54%;
+    background-color: rgb(165, 42, 140);
+}
+.item4{
+    height:150px;
+    width:240px;
+    border: 3px solid rgb(255, 255, 255);
+    top:5%;
+    left:50%;
+    background-color: rgb(149, 165, 42);
+}
+.item5{
+    height:300px;
+    width:250px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(165, 42, 63);
+}
+.item6{
+    height:150px;
+    width:200px;
+    border: 3px solid rgb(255, 255, 255);
+    top:30%;
+    left:27%;
+    background-color: rgb(42, 95, 165);
+}
+.item7{
+    height:150px;
+    width:200px;
+    border: 3px solid rgb(255, 255, 255);
+    top:20%;
+    left:60%;
+    background-color: rgb(42, 95, 165);
+}
+.grid-container .opa:hover{
+    opacity: 1;
+}
+
+.opa{
+    z-index: 100;
+    opacity:0;
+    transition: opacity 1s ease;
+}
+@media(max-width:900px){
+    .item1{
+        left: 25%;
+    }
+    .item2{
+        top:7%;
+        left:30%;
+    }
+    .item6{
+        left:20%;
+        top:30%;
+    }
+    .item7{
+        left:55%;
+    }
+    .item4{
+        left:45%;
+    }
+}
+@media(max-width:600px){
+    .gallary{
+        justify-content:center;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .gallary>div{
+        position:static !important;
+        
+    }
+    .grid-container .opa:hover{
+    opacity: 0;
+     }
+    .item1{
+    height:150px;
+    width:240px;
+    
+    background-color: brown;
+    
+}
+.item2{
+    height:200px;
+    width:150px;
+    border: 3px solid rgb(255, 255, 255);
+    
+    background-color: rgb(42, 138, 165);
+}
+.item3{
+    height:210px;
+    width:160px;
+    border: 3px solid rgb(255, 255, 255);
+    
+    background-color: rgb(165, 42, 140);
+}
+.item4{
+    height:150px;
+    width:240px;
+    border: 3px solid rgb(255, 255, 255);
+    
+    background-color: rgb(149, 165, 42);
+}
+.item5{
+    height:300px;
+    width:250px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(165, 42, 63);
+}
+.item6{
+    height:150px;
+    width:200px;
+    border: 3px solid rgb(255, 255, 255);
+    
+    background-color: rgb(42, 95, 165);
+}
+.item7{
+    height:150px;
+    width:200px;
+    border: 3px solid rgb(255, 255, 255);
+    background-color: rgb(42, 95, 165);
+}
+.opa{
+    height: 5px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="grid-container">
+    <div class="gallary">
+        <div class="item6">6</div>
+        <div class="item6 opa">6</div>
+        <div class="item7"></div>
+        <div class="item7 opa"></div>
+        <!-- <div class="item1">1</div> -->
+        <div class="item2">2</div>
+        <div class="item2 opa">2</div>
+        <div class="item3">3</div> 
+        <div class="item3 opa">3</div> 
+        <div class="item5">5</div> 
+        <div class="item5 opa">5</div>   
+        <div class="item1">1</div>
+        <div class="item1 opa">1</div>
+        <div class="item4">4</div>
+        <div class="item4 opa">4</div>
+        <!-- <div class="item5">5</div>  -->
+    </div>
+</div>
+
+
+</body>
+</html>
+
