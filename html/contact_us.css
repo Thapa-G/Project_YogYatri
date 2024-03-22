@@ -141,16 +141,18 @@ input{
     width:150px;
     height:40px;
     border: none;
+    border-radius: 2px;
     background-color:rgb(245, 133, 13) ;
     color:white;
     font-size: 15px;
     letter-spacing: 0.5px;
+
 }
 .Contact_us input[type=submit]:hover{
-    background-color: #FE1818;
+    background-color: #c818fe66;
     transition: 1s ease;
 }
 .Contact_us span{
-    color:red;
+    color:rgb(134, 5, 5);
     font-size: small;
 }

@@ -420,23 +420,74 @@
             </div>
             <div class="Contact_us">
                 <p>IF YOU GOT ANY QUESTIONS <br> PLEASE DO NOT HESITATE TO SEND US A MESSAGE</p>
-                <form method="Post"> 
-                    <input type="text" name="Name" placeholder="Name" value="">
-                    
-                    <br>
-                    <input type="email" name="Email" placeholder="Email">
-                    <br>
-                    <input type="text" name="subject" placeholder="Subject" value="">
-                    <br>
-                    <input type="text" name="feedback" placeholder="Message" value="">
-                    <br>
-                    <!-- <button type="submit">Send Message</button> -->
-                    <input type="submit" name=submit value="Send Message">
+                <form id="myForm" onsubmit="return validateForm()">
+        
+                    <input type="text" id="name" name="name">
+                    <span id="nameError" class="error"></span><br>
+            
+                    <input type="email" id="email" name="email">
+                    <span id="emailError" class="error"></span><br>
+
+                    <input type="text" id="subject" name="subject">
+                    <span id="subjectError" class="error"></span><br>
+
+                    <input type="text" id="message" name="message">
+                    <span id="messageError" class="error"></span><br>
+
+                    <input type="submit" value="Submit">
                 </form>
                 
             </div>
         </div>
     </footer>
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+            var message = document.getElementById("message").value;
+            var nameError = document.getElementById("nameError");
+            var emailError = document.getElementById("emailError");
+            var subjectError = document.getElementById("subjectError");
+            var messageError = document.getElementById("messageError");
+
+            // Reset error messages
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+            subjectError.innerHTML = "";
+            messageError.innerHTML = "";
+
+            // Check if name is empty
+            if (name === "") {
+                nameError.innerHTML = "Enter Please";
+                return false;
+            }
+
+            // Check if email is empty
+            if (email === "") {
+                emailError.innerHTML = "Email Please";
+                return false;
+            }
+            if (subject === "") {
+                subjectError.innerHTML = "Subject Please";
+                return false;
+            }
+            if (message === "") {
+                messageError.innerHTML = "Whats the msg ?";
+                return false;
+            }
+
+            // Check if email is valid
+            var emailRegex = /^\S+@\S+\.\S+$/;
+            if (!emailRegex.test(email)) {
+                emailError.innerHTML = "Invalid email address";
+                return false;
+            }
+           
+
+            return true;
+        }
+    </script>
 
 
     <script>
@@ -461,9 +512,10 @@
         togglebuticon.classList=isOpen?'fa-solid fa-xmark':'fa-solid fa-bars';
     }
     </script>
-    <!-- reveal script -->
+    
     <script type="text/javascript">
-        window.addEventListener('scroll',reveall);
+        // *********************reveal script animation section************************
+        window.addEventListener('scroll',reveall);//aCTIVE ON SROLL...... rEVEAL FROM LEFT
         function reveall(){
             var reveals=document.querySelectorAll('.reveall');
             for(var i=0;i<reveals.length;i++){
@@ -477,7 +529,7 @@
                 }
             }
         }
-        window.addEventListener('scroll',revealr);
+        window.addEventListener('scroll',revealr);//ACTIVE ON SCROLL......rEVEAL FROM  RIGTHT 
         function revealr(){
             var reveals=document.querySelectorAll('.revealr');
             for(var i=0;i<reveals.length;i++){
@@ -491,7 +543,7 @@
                 }
             }
         }
-        window.addEventListener('scroll',revealy);
+        window.addEventListener('scroll',revealy);//aCTIVE ON SCROLL......REVEAL FROM BELLOW
         function revealy(){
             var reveals=document.querySelectorAll('.revealy');
             for(var i=0;i<reveals.length;i++){
@@ -505,8 +557,12 @@
                 }
             }
         }
-    </script>
 
+
+    </script>
+   
+
+    
 
 </body>
 </html>
