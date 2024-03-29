@@ -419,22 +419,23 @@
             </div>
             <div class="Contact_us">
                 <p>IF YOU GOT ANY QUESTIONS <br> PLEASE DO NOT HESITATE TO SEND US A MESSAGE</p>
-                <form id="myForm" onsubmit="return validateForm()">
+                <form id="myForm" method="post" action="contact_table.php" onsubmit="return validateForm()">
         
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" >
                     <span id="nameError" class="error"></span><br>
             
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" >
                     <span id="emailError" class="error"></span><br>
 
-                    <input type="text" id="subject" name="subject">
+                    <input type="text" id="subject" name="subject" >
                     <span id="subjectError" class="error"></span><br>
 
-                    <input type="text" id="message" name="message">
+                    <input type="text" id="message" name="message" >
                     <span id="messageError" class="error"></span><br>
 
                     <input type="submit" value="Submit">
                 </form>
+                
                 
             </div>
         </div>
