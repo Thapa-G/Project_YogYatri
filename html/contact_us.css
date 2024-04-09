@@ -141,7 +141,7 @@ input{
     width:150px;
     height:40px;
     border: none;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color:rgb(245, 133, 13) ;
     color:white;
     font-size: 15px;
@@ -149,8 +149,14 @@ input{
 
 }
 .Contact_us input[type=submit]:hover{
-    background-color: #c818fe66;
-    transition: 1s ease;
+    background-color: rgb(9, 90, 176) ;
+    transition: 0.5s forward;
+}
+.Contact_us input[type=submit]:active{
+    background-color: #3adb3f;
+    box-shadow: 0 5px #c2f387;
+    transform: translateY(5px);
+    transition: 1s forward;
 }
 .Contact_us span{
     color:rgb(134, 5, 5);

@@ -419,7 +419,7 @@
             </div>
             <div class="Contact_us">
                 <p>IF YOU GOT ANY QUESTIONS <br> PLEASE DO NOT HESITATE TO SEND US A MESSAGE</p>
-                <form id="myForm" method="post" action="contact_table.php" onsubmit="return validateForm()">
+                <form id="myForm" method="post">
         
                     <input type="text" id="name" name="name" >
                     <span id="nameError" class="error"></span><br>
@@ -433,7 +433,10 @@
                     <input type="text" id="message" name="message" >
                     <span id="messageError" class="error"></span><br>
 
-                    <input type="submit" value="Submit">
+
+                <div id="response"></div>
+
+                    <input type="submit" value="Submit" onclick="response();event.preventDefault()">
                 </form>
                 
                 
@@ -487,6 +490,27 @@
 
             return true;
         }
+       
+    function response() {
+        if (validateForm()) {
+            var xhr = new XMLHttpRequest();
+            var formdata = new FormData(document.getElementById("myForm"));
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status == 200) {
+                        document.getElementById("response").innerHTML = xhr.responseText;
+                        document.getElementById("myForm").reset(); // Reset form fields
+                    } else {
+                        document.getElementById("response").innerHTML = "Error! Please try again later.";
+                    }
+                }
+            };
+            xhr.open("POST", "contact_table.php", true); // Update the URL to the correct path
+            xhr.send(formdata);
+        }
+    }
+
+
     </script>
 
 
