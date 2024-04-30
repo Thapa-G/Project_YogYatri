@@ -1,142 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./styleslider.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Salsa">
-    <style type="text/css">
-        .about_us{
-            width: 100%;
-        }
-        .about_us .icon{
-            text-align: center;
-            margin-top: 40px;
-            
-            
-        }
-        .about_us .icon i{
-            color: rgb(9, 10, 10);
-            font-size: 90px;
-            border-radius: 50%;
-            /* height:100px;
-            width:100px; */
-            opacity: 0;
-            animation: show_info 2s ease-in-out 0.6s 1 forwards;
-        }
-        .about_us .icon h2{
-            animation: filter 2s ease-in-out 2s 1 forwards;
-            font-family:'Salsa';
-            opacity: 0;
-            
-            
-        }
-        @keyframes filter{
-            0%{
-                opacity:0;
-            }
-            100%{
-                opacity: 1;
-            }
-        }
-        @keyframes show_info{
-            0%{
-                opacity:0;
-                font-size: 15px;
-                
-                filter:blur(10px);
-                
-            }
-            
-            100%{
-                opacity: 1;
-                font-size: 90px;
-            }
-                
-            
-        }
-        
-        nav .nav_bar ul li:nth-child(4){
-            animation:nav_show 1s ease-in 0.2s 1 forwards;
-        }
-        nav .nav_bar ul li:nth-child(3),
-        nav .nav_bar ul li:nth-child(5){
-            animation:nav_show 1s ease-in 0.35s 1 forwards;
-        }
-        nav .nav_bar ul li:nth-child(2),
-        nav .nav_bar ul li:nth-child(6){
-            animation:nav_show 1s ease-in 0.45s 1 forwards;
-        }
-        nav .nav_bar ul li:nth-child(1),
-        nav .nav_bar ul li:nth-child(7){
-            animation:nav_show 1s ease-in 0.55s 1 forwards;
-        }
-        
-        @keyframes nav_show{
-            0%{
-                transform:translate(0,-130px);
-                opacity:0;
-            }
-            90%{
-                transform:translate(0,8px);
-            }
-            100%{
-                transform:translate(0,0);
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="cont" style="background-color: rgb(255, 128, 0); height: 130px;"> 
-    <nav>
-        <div class="nav_upper">
-         <div class="logo"></div>
-        </div>
-        <div class="nav_bar">
-         <ul class="link">
-            
-             <li><a href="#"><i class="fa-solid fa-user-plus"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-route"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-image"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-book-open-reader"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-circle-info"></i></a></li>
-             <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
-         </ul>
-         <div class="toggle_but">
-             <i class="fa-solid fa-bars"></i>
-         </div>
-        </div>
-        <div class="dropdown">
-         <li><a href="#"><i class="fa-solid fa-user-plus"></i><span>Sign Up</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-route"></i><span>Package</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-image"></i><span>Gallary</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-book-open-reader"></i><span>Books</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-circle-info"></i><span>About us</span></a></li>
-             <li><a href="#"><i class="fa-solid fa-user"></i><span>Log In</span></a></li>
-        </div>
-     </nav>
-     </div>
-     <div class="about_us">
-        <div class="icon">
-            <i class="fa-solid fa-info"></i>
-            <h2>About Us</h2>
-        </div>
 
-     </div>
-     <script>
-        //navbar responsive
-   const togglebut=document.querySelector('.toggle_but');
-   const togglebuticon=document.querySelector('.toggle_but i');
-   const dropdown=document.querySelector('.dropdown');
-   togglebut.onclick=function(){
-       dropdown.classList.toggle('open');
-       const isOpen=dropdown.classList.contains('open');
-       togglebuticon.classList=isOpen?'fa-solid fa-xmark':'fa-solid fa-bars';
-   }
-   </script>
+<head>
+    <meta charset="utf-8">
+    
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+  
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet"> -->
+
+    <!-- Libraries Stylesheet -->
+    <!-- <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet"> -->
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+      
+        <div class="container-xxl py-5 page-header position-relative mb-5">
+            <div class="container py-5">
+                <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1> 
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- Page Header End
+
+
+        About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">Learn More About Our Team</h1>
+                        <p>Welcome to Yog Yatri, your gateway to spiritual journeys and transformative experiences. At Yog Yatri, we believe that travel is not just about exploring new destinations, but also about embarking on a journey within ourselves.</p>
+                        <p class="mb-4">Our mission is to curate immersive tour packages to sacred and spiritual places around the world, providing you with the opportunity to rejuvenate your mind, body, and soul. Whether you seek solace in the serene landscapes of ancient temples, the tranquil ambiance of holy sites, or the wisdom of spiritual gurus, Yog Yatri has the perfect itinerary for you.</p>
+                        <p class="mb-4">With a deep understanding of the significance of these sacred places, we meticulously design each tour to offer a blend of cultural immersion, spiritual practices, and guided explorations. Our experienced team ensures that every aspect of your journey is taken care of, from comfortable accommodations to authentic local experiences.</p>
+                        <p class="mb-4">At Yog Yatri, we believe in the power of travel to inspire personal growth and self-discovery. Join us on a transformative journey where you can connect with your inner self, gain a deeper understanding of ancient traditions, and create memories that will last a lifetime.</p>
+                        <p class="mb-4">Embark on a spiritual adventure with Yog Yatri and let the journey be your guide to inner peace, enlightenment, and spiritual fulfillment.</p>
+                        <div class="row g-4 align-items-center">
+                            <div class="col-sm-6">
+                               
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center">
+                                    <!-- <img class="rounded-circle flex-shrink-0" src="img/user.jpg" alt="" style="width: 45px; height: 45px;"> -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="../img/IMG_4558.JPG" alt="">
+                            </div>
+                            <div class="col-6 text-start" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="../img/IMG_4569.JPG" alt="">
+                            </div>
+                            <div class="col-6 text-end" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="../img/IMG_4559.JPG" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+
+        <!-- Team Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Meet Our Team</h1>
+                    <p>Our guides are here to help you in your travel journey. We are focused on making your travel memorable.</p>
+                    <p>Get in touch with our guides. Let's make travel fun.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="team-item position-relative">
+                            <img class="img-fluid rounded-circle w-75" src="../img/jane4.jpg" alt="">
+                            <div class="team-text">
+                                <h3>Jane Dhungel</h3>
+                                <p>Travel Guide</p>
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="team-item position-relative">
+                            <img class="img-fluid rounded-circle w-75" src="../img/aa.jpg" alt="">
+                            <div class="team-text">
+                                <h3>Aashik Thapa</h3>
+                                <p>Travel Guide</p>
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="team-item position-relative">
+                            <img class="img-fluid rounded-circle w-75" src="../img/cc.jpg" alt="">
+                            <div class="team-text">
+                                <h3>Cheeja Sharma</h3>
+                                <p>Travel Guide</p>
+                                <div class="d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+
+
+    
+      
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
