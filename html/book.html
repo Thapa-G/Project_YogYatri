@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Collection</title>
+  <style>
+       body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .flower img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    animation: fall 5s linear infinite;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -100px;
+      opacity: 0;
+    }
+    100% {
+      top: 90vh;
+      opacity: 1;
+    }
+  }
+  
+  .books-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 50px;
+  }
+  
+  .book {
+    width: 170px;
+    height: fit-content;
+    margin: 10px;
+    overflow: hidden;
+    border: 1px solid #f18d12;
+    border-radius: 8px;
+    box-shadow: 0 2px orange;
+  }
+  
+  .book .book-image img {
+    width: 190px;
+    height: 300px;
+  }
+  
+  .book .book-content {
+    padding: 20px;
+  }
+  
+  .book .book-content h2 {
+    margin-top: 0;
+    font-size: medium;
+  }
+  
+  .book .book-content p {
+    margin-bottom: 10px;
+  }
+  
+  .book .book-content .read-more {
+    background-color: rgb(240, 207, 146);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .additional-content {
+    display: none; 
+  }
+  
+  .additional-content.show {
+    display: block;
+  }
+  
+  .book .book-content .read-more:hover {
+    background-color: rgb(234, 134, 98);
+  }
+  .pdf-container {
+    margin-top: 10px; 
+  }
+  
+  .pdf-container a {
+    display: block;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="flower">
+    <img src="/img/pink.png">
+    <img src="/img/white.png">
+    <img src="/img/orange.png">
+    <img src="/img/pink.png">
+    <img src="/img/white.png">
+    <img src="/img/orange.png">
+    <img src="/img/pink.png">
+    <img src="/img/white.png">
+    <img src="/img/orange.png">
+  </div>
+
+  <div class="books-container">
+    <div class="book">
+      <div class="book-image">
+        <img src="/img/gita.jpg" alt="भागवत गीता">
+      </div>
+      <div class="book-content">
+        <h2>भागवत गीता</h2>
+        <div class="pdf-container">
+          <a href="/vagwat.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="/img/swosthani.webp" alt="स्वस्थानी ब्रत कथा">
+      </div>
+      <div class="book-content">
+        <h2>स्वस्थानी ब्रत कथा</h2>
+        <div class="pdf-container">
+          <a href="/shree-swasthani-brata-katha.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="/img/Adhikabi-Bhanubhaktako-Ramayan-300x400.webp" alt="रामायण">
+      </div>
+      <div class="book-content">
+        <h2>रामायण</h2>
+        <div class="pdf-container">
+          <a href="/Ramayan in nepali (Bhanubhakta acharya).pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="/img/rig ved.jpg" alt="ऋगवेद">
+      </div>
+      <div class="book-content">
+        <h2>ऋगवेद</h2>
+        <div class="pdf-container">
+          <a href="/rigved High_quality.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+    <div class="book">
+      <div class="book-image">
+        <img src="/img/sam ved.jpg" alt="सामवेद">
+      </div>
+      <div class="book-content">
+        <h2>सामवेद</h2>
+        <div class="pdf-container">
+          <a href="/Sam-Ved-Nepali.pdf" download>Download PDF</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+     const flowers = document.querySelectorAll('.flower img');
+   
+     flowers.forEach((flower) => {
+       flower.style.left = Math.random() * (window.innerWidth - 40) + 'px';
+       flower.style.animationDelay = Math.random() * 4 + 's';
+     });
+        });
+  </script>
+</body>
+</html>
+
